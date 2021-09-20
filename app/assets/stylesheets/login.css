@@ -1,0 +1,33 @@
+.login-main{
+  height: 100vh;
+  background-image: url('fukuoka-image.jpg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-btn {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.login-red-btn {
+  width: 100%;
+  background:lightyellow;;
+  border: 1px solid lightyellow;;
+  color: black;
+  line-height: 48px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.login-flash-message {
+  text-align: center;
+  color: red;
+}
+
+.new-form-wrap{
+  width: 40%;
+  padding-bottom: 70px;
+}

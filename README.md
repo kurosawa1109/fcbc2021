@@ -2,15 +2,14 @@
 
 ## users テーブル
 
-| Column             | Type    | Options     |
-| ------------------ | ------- | ----------- |
-| email              | string  | null: false |
-| encrypted_password | string  | null: false |
-| nickname           | string  | null: false |
-| age                | string  | null: false |
-| gender_id          | integer | null: false |
-| style              | string  | null: false |
-| favorite           | string  | null: false |
+| Column             | Type     | Options     |
+| ------------------ | -------- | ----------- |
+| email              | string   | null: false |
+| encrypted_password | string   | null: false |
+| nickname           | string   | null: false |
+| age_id             | integer  |             |
+| gender_id          | integer  |             |
+| favorite           | string   | null: false |
 
 ### Association
 
