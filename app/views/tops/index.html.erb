@@ -1,0 +1,105 @@
+<header class='top-page-header'>
+  <div class='search-bar-contents'>
+    
+  </div>
+  <div class='nav'>
+  <ul class='lists-left'>
+     <%= link_to image_tag("fcbc-logo.jpg", class:"furima-icon"), "/" %>
+    
+    </ul>
+    <ul class='lists-right'>
+      <% if user_signed_in? %>
+        <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li>
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+      <% else %>
+        <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+        <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+      <% end %>
+    </ul>
+  </div>
+</header>
+
+<div class='main'>
+  <div class='title-contents'>
+    <h2 class='service-title'>
+    </h2>
+</div>
+
+<div class='select-reason-contents'>
+    <h2 class='title'>
+        CRAFT BEER
+      <br>
+       〜クラフトビール〜
+    </h2>
+    <p class='title'>
+      クラフト（craft）は英語で「技術」「工芸」「職人技」などを意味する言葉。
+     <br>
+      クラフトビールとは、小規模醸造所がつくる多様で個性的なビールのこと。
+     <br>
+      醸造する豊かなその土地の風土、
+     <br>
+      作り手によって様々な味わいが楽しめるのが特徴です。
+     <br>
+      種類によって新しい驚きや発見があり、
+     <br>
+      クラフトビールでしか出会えない感動があります。
+     <br>
+      福岡にもそんな素敵なビールを醸造しているブリュワリーがあり、
+     <br>
+     日本各地のクラフトビールが楽しめる場所もあります。
+     <br>
+     福岡にはたくさんの素敵なクラフトビールたちが集まっています。
+     <br>
+     思い思いにクラフトビールを楽しみ
+     <br>
+     福岡のクラフトビールシーンを盛り上げよう！
+    </p>
+
+    <ul class='reason-lists'>
+      <li class='list'>
+        <%= image_tag "beer-image.jpg", class:"list-pict" %>
+        <h3 class='reason-list-text'>
+          お店に飲みに行こう！
+        </h3>
+        <p class='reason-list-description'>
+          福岡市内にはクラフトビールを楽しめる店がたくさん。素敵なお店に遊びに行こう！
+        </p>
+      </li>
+      <li class='list'>
+        <%= image_tag "brewery-image.jpg", class:"list-pict" %>
+        <h3 class='reason-list-text'>
+          クラフトビールの醸造所を知ろう！
+        </h3>
+        <p class='reason-list-description'>
+          福岡県にはクラフトビールを醸造しているBreweryがたくさん！個性あふれるブリュワりーを応援しよう！
+        </p>
+      </li>
+      <li class='list'>
+        <%= image_tag "kanpai-image.jpg", class:"list-pict" %>
+        <h3 class='reason-list-text'>
+          美味しいビールを共有しよう！
+        </h3>
+        <p class='reason-list-description'>
+          実際に飲んで、美味しかった、面白かったビールを投稿して楽しみましょう！
+        </p>
+      </li>
+    </ul>
+</div>
+
+<%= image_tag "fukuoka1.jpg", class:"oohori" %>
+
+<div class='footer'>
+  <div class='footer-message'>
+    <h3 class='statement'>
+          ２０歳未満の飲酒は法律で禁止されています。
+          <p class='statement-message'>
+            飲酒は２０歳になってから。
+          <br>
+             飲酒運転は法律で禁止されています。
+          <br>
+             妊娠中や、授乳期授乳期の飲酒はお控えください。
+          </p>
+        </h3>
+    </div>
+  </div>
+</div>
