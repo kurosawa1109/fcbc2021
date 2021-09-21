@@ -1,6 +1,7 @@
 
 * {
   box-sizing: border-box;
+  font-family: HiraMinProN-W3;
 }
 
 .top-page-header {
@@ -83,46 +84,38 @@
 .user-nickname {
   text-decoration: none;
   margin-right: 3vw;
-  color:white;
-  font-weight: bold;
+  color:black;
   display: block;
-  border: solid 2px blueviolet;
-  background-color: blueviolet;
+  background-color: white;
   padding: 10px;
 }
 
 
 .logout {
   text-decoration: none;
-  color: white;
+  color:black;
   display: block;
-  border: solid 2px blueviolet;
-  background-color: blueviolet;
+  background-color: white;
   padding: 10px;
-  font-weight: bold;
 }
 
 .login {
   text-decoration: none;
   line-height: 32px;
   margin-right: 3vw;
-  color: white;
+  color:black;
   display: block;
-  border: solid 2px blueviolet;
-  background-color: blueviolet;
+  background-color: white;
   padding: 10px;
-  font-weight: bold;
 }
 
 .sign-up {
   text-decoration: none;
-  color:white;
+  color:black;
   padding-right: 40px;
   display: block;
-  border: solid 2px blueviolet;
-  background-color: blueviolet;
+  background-color: white;
   padding: 10px;
-  font-weight: bold;
 }
 
 a {
@@ -133,10 +126,12 @@ a {
   background: #f8f8f8;
 }
 
-/* 画面上部の「人生を変えるフリマアプリ」帯部分 */
+
 .title-contents {
   width: 100vw;
   height: 500px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   background-image: url('Craft-Beer.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -189,7 +184,6 @@ a {
   content: '';
   width: 70px;
   height: 4px;
-  background-color: red;
   position: absolute;
   bottom: -10px;
   left: 50%;
@@ -248,7 +242,8 @@ a {
 
 .oohori{
   width: 100%;
-  height: 470px;
+  height: 490px;
+  margin-top: 30px;
 }
 
 .footer-message {
@@ -266,4 +261,30 @@ a {
 }
 .statement-message{
   font-size: 20px;
+}
+
+.enjoy{
+  text-align: center;
+  font-size: 3.5vh;
+  font-weight: bold;
+  margin-bottom: 5vh;
+  position: relative;
+  padding-top: 30px;
+  background-color: white;
+}
+
+.enjoy-statement-message2{
+  margin-top: 20px;
+  font-size: 2.5vh;
+}
+
+.Resutoran{
+  margin-top: 30px;
+  font-size: 20px;
+  border-bottom: solid black;
+}
+
+.top-fcbc{
+  font-size: 30px;
+  margin-top: 5px;
 }
