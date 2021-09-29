@@ -1,0 +1,71 @@
+<div class="items-sell-contents">
+  <header class="items-sell-header">
+    <%# <%= link_to image_tag('furima-logo-color.png' , size: '185x50'), "/" %>
+
+  </header>
+  <div class="items-sell-main">
+    <h2 class="items-sell-title">情報を入力</h2>
+    <%= form_with model:@post, url: posts_path, method: "post", local: true do |f| %>
+
+    <%# <%= render 'shared/error_messages', model: f.object %> 
+
+    <%# 商品画像 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        ビールの画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"item-image" %>
+      </div>
+    </div>
+    <%# /商品画像 %>
+<div class="new-items">
+    <div class="weight-bold-text">
+        ビールの評価
+        <span class="indispensable">必須</span>
+      </div>
+    <%= f.collection_select(:assessment_id, Assessment.all, :id, :name, {}, {class:"select-box", id:"posta-assesssment"}) %>
+  </div>
+    <div class="new-items">
+      <div class="weight-bold-text">
+        ビールの名前
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :beer_name, class:"input-default", id:"nickname", placeholder:"例:FUKUOKA IPA", maxlength:"40" %>
+  </div>
+  <div class="new-items">
+      <div class="weight-bold-text">
+        スタイル
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :style, class:"input-default", id:"nickname", placeholder:"例:Lager・Pale Ale・etc..", maxlength:"40" %>
+  </div>
+  
+  
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          ビールの説明
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :description, class:"items-text", id:"item-info", placeholder:"詳細、感想などを自由にご記入ください。" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+      <div class="new-items">
+      <div class="weight-bold-text">
+        お店の名前
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :bar_name, class:"input-default", id:"nickname", placeholder:"例:○○bar", maxlength:"40" %>
+  </div>
+
+    <div class="sell-btn-contents">
+      <%= f.submit "投稿する" ,class:"sell-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+  </div>
+  <% end %>
+
+ 

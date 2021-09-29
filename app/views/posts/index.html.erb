@@ -1,0 +1,120 @@
+<header class='top-page-header'>
+  <div class='nav'>
+  <ul class='lists-left'>
+     <%= link_to image_tag("fcbc-logo-2.jpg", class:"furima-icon"), "/" %>
+       <p class='top-fcbc'>
+          FUKUOKA
+          <br>
+          Craft Beer Circle
+        </p>
+    </ul>
+    <ul class='lists-right'>
+      <% if user_signed_in? %>
+        <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li>
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+      <% else %>
+        <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+        <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+      <% end %>
+    </ul>
+  </div>
+</header>
+
+ <div class='top-text'>
+ </div>
+
+
+<div class='select-reason-contents'>
+    <h2 class='title'>
+        BEER DICTIONALY
+     <br>
+       〜新たなクラフトビールとの出会い〜
+    </h2>
+    <p class='title'>
+      クラフトビールとの出会いは一期一会。
+     <br>
+      そもそもクラフトビールは醸造量が多くありません。
+     <br>
+      そして、同じものでも"その時"で味が変わったりもします。
+     <br>
+      一度飲んだら、２度と出会えない。
+     <br>
+      そんなビールもあるかもしれません。
+     <br>
+      ここでは、現在福岡で出会えるビールの最新情報、
+     <br>
+      過去に出会ったビールの情報を投稿し、
+     <br>
+     みなさんで情報を共有すると共に、
+     <br>
+     福岡だけの"BEER DICTIONALY"を
+     <br>
+     作り上げていきましょう。
+    </p>
+    
+    <p class='post-title'>
+       <%= link_to '投稿する', new_post_path , class: "post-title-btn"%>
+    </p>
+
+<div class='item-contents'>
+    <h2 class='item-title'>Beer Dictionary 一覧</h2>
+    </div>
+    <ul class='item-lists'>
+      <% @posts.each do |post| %>
+        <li class='list'>
+            <%= link_to posts_path(post.id), method: :get do %>
+              <div class='item-img-content'>
+                <%= image_tag post.image, class: "item-img" %>
+              <div class='item-info'>
+                <h3 class='item-name'>
+                  <%= post.beer_name %>
+                </h3>
+              </div>
+          <% end %>
+        </li>
+      <% end %>
+</div>
+
+  <div class='bottom-text'>
+ </div>
+
+  <div class='enjoy'>
+  <div class='enjoy-message'>
+    <h4 class='enjoy-statement'>
+          Once in a lifetime experience
+          <p class='enjoy-statement-message'>
+            CRAFT BEER
+          <br>
+             &
+          <br>
+             FUKUOKA
+          <br>
+          <p class='enjoy-statement-message2'>
+          クラフトビールと福岡で素敵な出会いを
+          </p>
+        </h4>
+    </div>
+  </div>
+</div>
+
+<div class='footer'>
+  <div class='footer-message'>
+    <h3 class='statement'>
+          ２０歳未満の飲酒は法律で禁止されています。
+          <p class='statement-message'>
+            飲酒は２０歳になってから。
+          <br>
+             飲酒運転は法律で禁止されています。
+          <br>
+             妊娠中や、授乳期の飲酒はお控えください。
+          </p>
+        </h3>
+    </div>
+  </div>
+</div>
+
+<span id="back">
+    <a href="">
+      <%= image_tag 'top_btn.png', data: {"turbolinks"=>false}, class: "arrow" %>
+    </a>
+</span>
