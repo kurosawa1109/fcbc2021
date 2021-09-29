@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   root to: "tops#index"
   resources :tops, only: :index
   resources :posts,only: [:index, :new, :create]
+  resources :resutorans, only: :index
 end
