@@ -1,24 +1,4 @@
-<header class='top-page-header'>
-  <div class='nav'>
-  <ul class='lists-left'>
-     <%= link_to image_tag("fcbc-logo-2.jpg", class:"furima-icon"), "/" %>
-       <p class='top-fcbc'>
-          FUKUOKA
-          <br>
-          Craft Beer Circle
-        </p>
-    </ul>
-    <ul class='lists-right'>
-      <% if user_signed_in? %>
-        <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li>
-        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
-      <% else %>
-        <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-        <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
-      <% end %>
-    </ul>
-  </div>
-</header>
+<%= render "devise/shared/header" %>
 
  <div class='top-text'>
  </div>
@@ -97,21 +77,7 @@
   </div>
 </div>
 
-<div class='footer'>
-  <div class='footer-message'>
-    <h3 class='statement'>
-          ２０歳未満の飲酒は法律で禁止されています。
-          <p class='statement-message'>
-            飲酒は２０歳になってから。
-          <br>
-             飲酒運転は法律で禁止されています。
-          <br>
-             妊娠中や、授乳期の飲酒はお控えください。
-          </p>
-        </h3>
-    </div>
-  </div>
-</div>
+<%= render "devise/shared/footer" %>
 
 <span id="back">
     <a href="">
