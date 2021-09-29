@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :tops, only: :index
   resources :posts,only: [:index, :new, :create]
   resources :resutorans, only: :index
+  resources :brewerys, only: :index
 end
