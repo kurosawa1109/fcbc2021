@@ -1,0 +1,92 @@
+
+.top-text{
+  background-image: url('otherhalf1.jpg');
+  width: 100%;
+  height: 550px;
+  background-size: cover;
+}
+
+.top-text-message{
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  
+}
+
+.item-lists {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.list {
+  width: 30%;
+  padding: 1vw;
+  background-color: #FFF;
+}
+
+.item-img-content {
+}
+
+.item-img {
+  width: 35vh;
+  height: 25vh;
+  border-radius: 10%;
+}
+
+.bottom-text{
+  background-image: url('otherhalf.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 260px;
+  margin-top: 50px;
+}
+
+.post-title{
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.item-name{
+  text-align: center;
+}
+
+.item-title{
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.post-title-btn{
+  width: 15%;
+  margin: 40px 0 40px 0;
+  padding: 12px;
+  display: inline-block;
+  border-radius: 5%;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  background: #000066;
+  color: #ffffff;
+  transition: .3s;
+  box-shadow: 6px 6px 3px #666666;
+  border: 2px solid #000066;
+}
+
+.post-title-btn:hover {
+  box-shadow: none;
+  color: #000066;
+  background: #ffffff;
+}
+
+#back {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+.arrow{
+  width: 50px;
+  height: 50px;
+}

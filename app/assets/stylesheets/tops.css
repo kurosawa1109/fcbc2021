@@ -120,17 +120,17 @@
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 .main {
-  background: #f8f8f8;
+  background: white;
 }
 
 
 .title-contents {
   width: 100vw;
   height: 500px;
-  margin-top: 30px;
   margin-bottom: 30px;
   background-image: url('Craft-Beer.png');
   background-size: cover;
@@ -164,9 +164,7 @@ a {
   height: 9vh;
 }
 
-/* //画面上部の「人生を変えるフリマアプリ」帯部分 */
 
-/* FURIMAが選ばれる3つの理由部分 */
 .select-reason-contents {
   padding: 5vh 15vw;
 }
@@ -210,7 +208,7 @@ a {
   margin-bottom: 20px;
   height: 150px;
   width: 100%;
-  border-radius: 30%;
+  border-radius: 20%;
 }
 
 .reason-list-number {
@@ -288,4 +286,9 @@ a {
 .top-fcbc{
   font-size: 30px;
   margin-top: 5px;
+  margin-left: 140px;
+}
+
+.enjoy-statement-message{
+  margin-top: 20px;
 }
