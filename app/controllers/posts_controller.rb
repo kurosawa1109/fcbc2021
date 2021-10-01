@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :move_to_index, only: [:edit, :update, :destroy]
+  before_action :move_to_index, only: :destroy
 
   def index
     @posts = Post.all.order('id DESC')
@@ -24,6 +24,11 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
+  def destroy
+    @post.destroy
+    redirect_to posts_path
+  end
+
   private
 
   def post_params
@@ -31,6 +36,7 @@ class PostsController < ApplicationController
   end
 
   def move_to_index
+    @post = Post.find(params[:id])
     redirect_to action: :index unless current_user.id == @post.user_id
   end
 
