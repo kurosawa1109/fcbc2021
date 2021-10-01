@@ -1,0 +1,44 @@
+<%= render "devise/shared/header" %>
+
+<div class="item-show">
+  <div class="item-box">
+    <div class="item-img-content">
+      <%= image_tag @post.image ,class:"item-box-img" %>
+    </div>
+        
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-item">ビール名</th>
+          <td class="detail-value"><%= @post.beer_name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">スタイル</th>
+          <td class="detail-value"><%= @post.style %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">ビールの説明</th>
+          <td class="detail-value"><%= @post.description %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">評価</th>
+          <td class="detail-value"><%= @post.assessment.name%></td>
+        </tr>
+        <tr>
+          <th class="detail-item">お店の名前</th>
+          <td class="detail-value"><%= @post.bar_name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">投稿者</th>
+          <td class="detail-value"><%= @post.user.nickname %></td>
+        </tr>
+      </tbody>
+    </table>
+    <%if user_signed_in? && current_user.id == @post.user_id %>
+          <%= link_to "削除", post_path(@post.id), method: :delete, class:"item-destroy" %>
+      <% end %>
+
+  </div>
+</div>
+
+<%= render "devise/shared/footer" %>
