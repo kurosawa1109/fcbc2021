@@ -28,3 +28,31 @@
 
 ### Association
 - belongs_to :user
+
+# restaurants テーブル
+
+| Column         | Type       | Options                        |
+| -------------- | ---------- | ------------------------------ |
+| beer_name      | string     | null: false                    |
+| style          | string     | null: false                    |
+| description    | text       | null: false                    |
+| assessment_id  | integer    | null: false                    |
+| bar_name       | string     | null: false                    |
+| user           | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :user
+
+# posts テーブル
+
+| Column         | Type       | Options                        |
+| -------------- | ---------- | ------------------------------ |
+| beer_name      | string     | null: false                    |
+| style          | string     | null: false                    |
+| description    | text       | null: false                    |
+| assessment_id  | integer    | null: false                    |
+| bar_name       | string     | null: false                    |
+| user           | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :user

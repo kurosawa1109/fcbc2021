@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   root to: "tops#index"
   resources :tops, only: :index
   resources :posts,only: [:index, :new, :create, :show, :destroy]
-  resources :resutorans, only: :index
+  resources :restaurants, only: :index
   resources :brewerys, only: :index
 end
