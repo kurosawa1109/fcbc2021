@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   resources :tops, only: :index
   resources :posts,only: [:index, :new, :create, :show, :destroy]
   resources :restaurants, only: :index
-  resources :brewerys, only: :index
+  resources :breweries, only: :index
 end

@@ -14,6 +14,8 @@
 ### Association
 
 - has_many :posts
+- has_many :restaurants
+- has_many :posts
 
 ## posts テーブル
 
@@ -43,7 +45,7 @@
 ### Association
 - belongs_to :user
 
-# posts テーブル
+# breweries テーブル
 
 | Column         | Type       | Options                        |
 | -------------- | ---------- | ------------------------------ |
