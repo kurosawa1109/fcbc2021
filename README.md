@@ -33,13 +33,13 @@ password:a12345
 
 # 実装した機能についての画像やGIFおよびその説明
 - ユーザー新規登録<br>
-フォームを入力するとトップページに遷移する。
-[![Image from Gyazo](https://i.gyazo.com/77f3ec33d763cb637b54f1756263192d.gif)](https://gyazo.com/77f3ec33d763cb637b54f1756263192d)
+フォームを入力するとユーザー登録ができ、閲覧できる様になる。
+[![Image from Gyazo](https://i.gyazo.com/744e3af47e804ac9cc7baaf2f0254a77.gif)](https://gyazo.com/744e3af47e804ac9cc7baaf2f0254a77)
 <br>
 
 - ビール投稿<br>
 フォームを入力して投稿すると一覧ページに遷移し、表示される。
-[![Image from Gyazo](https://i.gyazo.com/7d0b1e5c387fdfa282d4e0a260d1dc11.gif)](https://gyazo.com/7d0b1e5c387fdfa282d4e0a260d1dc11)
+[![Image from Gyazo](https://i.gyazo.com/0fa17e30ba91e1c0b6d57b689423ca1e.gif)](https://gyazo.com/0fa17e30ba91e1c0b6d57b689423ca1e)
 <br>
 
 # 実装予定の機能
